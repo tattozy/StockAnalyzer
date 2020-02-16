@@ -1,61 +1,41 @@
 package org.any.stock.analyzer.model;
 
-import java.util.Date;
-
+/**
+ * Encapsulates the values that make up a profit by storing buy and sell values
+ * <p>
+ * Should be using another data type for stock values in real life will most probably have decimal points,
+ * however it uses int as challenge mention price in dollars not cents
+ * <p>
+ *
+ * Used Integer as profit could be 0, if not difference is found between buy and sell price and could be null if not trading data is found.
+ */
 public class Profit {
 
-    private Date tradingDate;
-    private Long profit;
-    private Long buyPrice;
-    private Date buyTime;
-    private Long sellPrice;
-    private Date sellTime;
+    private Integer profit;
+    private Integer buyPrice;
+    private Integer sellPrice;
 
-    public Date getTradingDate() {
-        return tradingDate;
-    }
-
-    public void setTradingDate(Date tradingDate) {
-        this.tradingDate = tradingDate;
-    }
-
-    public Long getProfit() {
+    public Integer getProfit() {
         return profit;
     }
 
-    public void setProfit(Long profit) {
+    public void setProfit(Integer profit) {
         this.profit = profit;
     }
 
-    public Long getBuyPrice() {
+    public Integer getBuyPrice() {
         return buyPrice;
     }
 
-    public void setBuyPrice(Long buyPrice) {
+    public void setBuyPrice(Integer buyPrice) {
         this.buyPrice = buyPrice;
     }
 
-    public Date getBuyTime() {
-        return buyTime;
-    }
-
-    public void setBuyTime(Date buyTime) {
-        this.buyTime = buyTime;
-    }
-
-    public Long getSellPrice() {
+    public Integer getSellPrice() {
         return sellPrice;
     }
 
-    public void setSellPrice(Long sellPrice) {
+    public void setSellPrice(Integer sellPrice) {
         this.sellPrice = sellPrice;
-    }
-
-    public Date getSellTime() {
-        return sellTime;
-    }
-
-    public void setSellTime(Date sellTime) {
-        this.sellTime = sellTime;
     }
 }
